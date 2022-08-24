@@ -11,7 +11,7 @@ if(a % 2 == 0)
 }
 else
 {
-   Console.Write("Число - ");
+    Console.Write("Число - ");
     Console.Write(a);
     Console.Write(" нечётное");
 }

@@ -2,10 +2,14 @@
 Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int count = 1;
-while (count <= a)
+while (count <= Math.Abs(a))
 {
     if(count % 2 == 0) 
     {
+        if (a < 0)
+        {
+          Console.Write("-");  
+        }
         Console.Write(count);
         Console.Write(" ");
     }
