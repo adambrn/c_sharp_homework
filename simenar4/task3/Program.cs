@@ -30,15 +30,14 @@ bool IsInterestingNum(int num)
 }
 Console.Write("Введите размер массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
-int start = 1;
-int end = 1000000;
+
 int[] array = new int[n];
 for (int i = 0; i < n; i++)
 {
-    int temp = new Random().Next(start, end);
+    int temp = new Random().Next();
     while (!(IsInterestingNum(temp)))
     {
-        temp = new Random().Next(start, end);
+        temp = new Random().Next();
     }
     array[i] = temp;
 }
