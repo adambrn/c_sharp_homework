@@ -23,8 +23,8 @@ bool IsInterestingNum(int num)
     int sum = 0;
     for (int i = 0; i < AmountDigit(num); i++)
     {
-        multi *= GetDigit(num, i+1);
-        sum += GetDigit(num, i+1);
+        multi *= GetDigit(num, i + 1);
+        sum += GetDigit(num, i + 1);
     }
     return multi % sum == 0;
 }
@@ -33,8 +33,8 @@ bool WithZero(int num)
     bool flag = false;
     for (int i = 0; i < AmountDigit(num); i++)
     {
-        if (GetDigit(num, i+1) == 0) flag = true;
-   }
+        if (GetDigit(num, i + 1) == 0) flag = true;
+    }
     return flag;
 
 }
@@ -45,7 +45,7 @@ int[] array = new int[n];
 for (int i = 0; i < n; i++)
 {
     int temp = new Random().Next();
-    while (!(IsInterestingNum(temp))&&!(WithZero(temp)))
+    while (!(IsInterestingNum(temp)) || WithZero(temp))
     {
         temp = new Random().Next();
     }
