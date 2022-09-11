@@ -1,4 +1,7 @@
 ﻿// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Интервал генерации чисел
 int startInterval = 0;
 int endInterval = 10;
 
@@ -35,13 +38,13 @@ int[,] arrayNumbers = GenerateNewArray(M, N);
 PrintArray(arrayNumbers);
 double sum;
 double avg;
-for (int i = 0; i < arrayNumbers.GetLength(0); i++)
+for (int i = 0; i < arrayNumbers.GetLength(1); i++)
     {
         sum = 0;
-        for (int j = 0; j < arrayNumbers.GetLength(1); j++)
+        for (int j = 0; j < arrayNumbers.GetLength(0); j++)
         {
-            sum += arrayNumbers[i, j];
+            sum += arrayNumbers[j, i];
         }
-        avg =  Math.Round(sum / (arrayNumbers.GetLength(1)), 1);
-        Console.WriteLine($"Среднее арифметическое строки {i} равно: {avg}");
+        avg =  Math.Round(sum / (arrayNumbers.GetLength(0)), 1);
+        Console.WriteLine($"Среднее арифметическое столбца {i} равно: {avg}");
     }
