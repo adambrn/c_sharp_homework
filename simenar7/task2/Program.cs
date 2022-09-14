@@ -41,7 +41,7 @@ int positionJ = Convert.ToInt32(inputData.Split(' ')[1]);
 int[,] arrayNumbers = GenerateNewArray(N, M);
 PrintArray(arrayNumbers);
 
-if (positionI < arrayNumbers.GetLength(0) && positionJ < arrayNumbers.GetLength(1)) 
+if (positionI < arrayNumbers.GetLength(0) && positionJ < arrayNumbers.GetLength(1) && positionI >= 0 && positionJ >= 0) 
 {
     Console.WriteLine($"Элемент массива [{positionI},{positionJ}] равен: {arrayNumbers[positionI,positionJ]}");
     }
