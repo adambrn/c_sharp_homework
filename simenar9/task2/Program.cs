@@ -40,9 +40,7 @@ for (int k = 0; k < M * N; k++)
             tmp = j;
             counter++;
         }
-        currentColumn = tmp;
-       
-        
+        currentColumn = tmp;           
     }
     else if (direction == 3)
     {
@@ -52,10 +50,8 @@ for (int k = 0; k < M * N; k++)
             tmp = i;
             counter++;
         }
-        currentRow = tmp;
-       
+        currentRow = tmp;   
     }
-
 }
 
 for (int i = 0; i < matrix.GetLength(0); i++)
