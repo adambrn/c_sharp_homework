@@ -12,7 +12,7 @@ for (int k = 0; k < M * N; k++)
     direction = k % 4;
     if (direction == 0)
     {
-        for (int j = passedColumn; j < M - passedColumn; j++)
+        for (int j = passedColumn; j < N - passedColumn; j++)
         {
             matrix[currentRow, j] = counter;
             tmp = j;
@@ -23,7 +23,7 @@ for (int k = 0; k < M * N; k++)
     }
     else if (direction == 1)
     {
-        for (int i = passedRow; i < N - passedRow + 1; i++)
+        for (int i = passedRow; i < M - passedRow + 1; i++)
         {
             matrix[i, currentColumn] = counter;
             tmp = i;
